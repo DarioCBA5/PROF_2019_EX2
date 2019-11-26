@@ -1,20 +1,26 @@
 package ProfIngSoft.Examen2;
 
+import java.util.ArrayList;
+import java.util.List;
+
 public class ClaseExamen {
 	
-	public static int[] primos (int n)
+	public static List<Integer> primos (int n) throws EntradaInvalida
 	{
-		int j = 0;
-		int[] Lista_final;
+		if(n<=1)
+		{
+			throw new EntradaInvalida();
+		}
+		
+		List<Integer> Lista_final = new ArrayList<Integer>();
 		for (int i=2; i<n; i++)
 		{
 			while(n%i == 0)
 			{
-				Lista_final[j] = n/i;
-				j++;
+				Lista_final.add(i);
+				n = n/i;
 			}
 		}
-		
+		return Lista_final;
 	}
-	
 }
