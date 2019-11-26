@@ -13,7 +13,7 @@ public class ClaseExamen {
 		}
 		
 		List<Integer> Lista_final = new ArrayList<Integer>();
-		for (int i=2; i<n; i++)
+		for (int i=2; i<=n; i++)
 		{
 			while(n%i == 0)
 			{

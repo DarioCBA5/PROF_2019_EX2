@@ -9,6 +9,11 @@ import org.junit.Test;
 
 public class ClaseExamenTest {
 
+	@Test(expected = EntradaInvalida.class)
+	public void test_excepcion() throws EntradaInvalida {
+		ClaseExamen.primos(1);
+	}
+	
 	
 	@Test
 	public void test_numero_6() throws EntradaInvalida {
